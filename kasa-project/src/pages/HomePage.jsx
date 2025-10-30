@@ -1,9 +1,18 @@
+import FooterComponent from "../components/FooterComponent";
+import HeaderComponent from "../components/HeaderComponent";
+
 function HomePage() {
-    return ( 
-        <div className="main-container">
+    return (
+      <div className="main-container">
+        <>
+          <div className="main-container">
+            <HeaderComponent />
             Home Page
-        </div>
-     );
+            <FooterComponent />
+          </div>
+        </>
+      </div>
+    );
 }
 
 export default HomePage;
