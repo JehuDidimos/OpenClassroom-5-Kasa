@@ -1,7 +1,14 @@
+import "../styles/FooterStyles.scss";
+import logo from "../assets/LOGO_footer.png"
 function FooterComponent() {
     return ( 
-        <div className="main-container">
-            Footer Component
+        <div className="footer-container">
+            <div className="icon">
+                <img src={logo} alt="" />
+            </div>
+            <div className="footer-content">
+                © 2020 Kasa. All rights reserved
+            </div>
         </div>
      );
 }

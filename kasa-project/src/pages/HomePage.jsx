@@ -3,15 +3,14 @@ import HeaderComponent from "../components/HeaderComponent";
 
 function HomePage() {
     return (
-      <div className="main-container">
         <>
           <div className="main-container">
             <HeaderComponent />
-            Home Page
+            <div className="content">Home page</div>
             <FooterComponent />
           </div>
         </>
-      </div>
+
     );
 }
 

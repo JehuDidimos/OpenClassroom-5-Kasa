@@ -1,0 +1,28 @@
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5vw;
+    margin-top: 3vw;
+}
+
+.nav-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    div{
+        text-align: end;
+        width:8vw;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 24px;
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+    
+}
