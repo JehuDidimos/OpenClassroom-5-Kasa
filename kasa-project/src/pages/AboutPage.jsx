@@ -1,13 +1,13 @@
 import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
+import BannerComponent from "../components/BannerComponent";
+import bannerImage from "../assets/sky.png"
 
 function AboutPage() {
     return (
         <>
             <div className="main-container">
-                <HeaderComponent />
-                About Page
-                <FooterComponent/>
+                <BannerComponent imageSource={bannerImage}/>
             </div>
         </>
       

@@ -6,9 +6,7 @@ function PropertyPage() {
       <div className="main-container">
         <>
           <div className="main-container">
-            <HeaderComponent />
             Property Page
-            <FooterComponent />
           </div>
         </>
       </div>

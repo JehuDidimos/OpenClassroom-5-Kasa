@@ -6,9 +6,7 @@ function ErrorPage() {
       <div className="main-container">
         <>
           <div className="main-container">
-            <HeaderComponent />
             Error Page
-            <FooterComponent />
           </div>
         </>
       </div>

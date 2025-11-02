@@ -1,0 +1,27 @@
+.banner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0px;
+    img{
+        width: 80vw;
+        height: 25vh;
+        object-fit: cover;
+        display: block;
+        border-radius: 16px;
+    }
+}
+
+.image-overlay{
+    width: 80vw;
+    height: 25vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: #5a5a5a4e;
+    border-radius: 16px;
+}
+

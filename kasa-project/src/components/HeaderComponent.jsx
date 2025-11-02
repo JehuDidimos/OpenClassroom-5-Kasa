@@ -1,4 +1,4 @@
-import "../styles/HeaderStyles.scss";
+import "../styles/components/HeaderStyles.scss";
 import logo from "../assets/LOGO.png"
 
 function HeaderComponent() {
