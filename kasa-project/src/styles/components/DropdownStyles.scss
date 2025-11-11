@@ -1,0 +1,19 @@
+@import '../font.scss';
+
+.dropdown-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF6060;
+    border-radius: 5px;
+    width: 77vw;
+    height: 4vh;
+    padding: 10px 20px 10px 10px;
+}
+
+.dropdown-title{
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: 700;
+    color:#FFFFFF;
+}
