@@ -19,9 +19,13 @@
 }
 
 .home-link{
-    a:visited{
-        color: inherit;
+    a{
+        color: black;
+        &:visited{
+            color: inherit;
+        }
     }
     padding-bottom: 10vh;
+    
 }
 
