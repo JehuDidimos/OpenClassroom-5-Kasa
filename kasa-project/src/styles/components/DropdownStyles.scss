@@ -17,3 +17,12 @@
     font-weight: 700;
     color:#FFFFFF;
 }
+
+.vector-normal{
+    transition: transform 0.3s ease;
+    transform: rotate(-180deg);
+}
+
+.vector-flipped{
+    transition: transform 0.3s ease;
+}

@@ -1,13 +1,23 @@
 import "../styles/components/DropdownStyles.scss"
 import closedVector from "../assets/Vector-up.png"
+import { useState } from "react";
 function DropdownComponent() {
+    const [flipped, setFlipped] = useState(false);
+
+    function toggleFlipAnimation(){
+        setFlipped(prev => !prev);
+        console.log(flipped);
+    }
     return ( 
-        <div className="dropdown-main">
+        <div className="dropdown-main" onClick={() => toggleFlipAnimation()} >
             <div className="dropdown-title">
                 Sample Title
             </div>
             <div className="vector">
-                <img src={closedVector} alt="" />
+                <img 
+                className={flipped ? "vector-normal" : "vector-flipped"}
+                src={closedVector} 
+                />
             </div>
         </div>
      );
