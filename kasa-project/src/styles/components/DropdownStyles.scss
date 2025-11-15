@@ -1,4 +1,4 @@
-@import '../font.scss';
+@import '..//helpers/font.scss';
 
 .dropdown-main{
     display: flex;
@@ -16,6 +16,19 @@
     font-size: 24px;
     font-weight: 700;
     color:#FFFFFF;
+}
+
+.content-hidden{
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 0;
+}
+
+.content-shown{
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 10vh;
+    background-color: #ffe3e3;
 }
 
 .vector-normal{
