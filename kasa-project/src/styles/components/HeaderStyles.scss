@@ -1,10 +1,12 @@
+@import '../helpers/spacing.scss';
+
 .header-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 5vw; //Create spacing variables -> spacing.scss rem (reccomended)
-    margin-top: 3vw;
+    padding: 0 $space-xxl; //Create spacing variables -> spacing.scss rem (reccomended)
+    padding-top: $space-xl;
 }
 
 .nav-buttons{

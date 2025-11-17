@@ -1,6 +1,13 @@
 @import '..//helpers/font.scss';
+@import '..//helpers/spacing.scss';
+
+.dropdown-single{
+    display: block;
+    overflow: hidden;
+}
 
 .dropdown-main{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,6 +16,7 @@
     width: 77vw;
     height: 4vh;
     padding: 10px 20px 10px 10px;
+    z-index: 1;
 }
 
 .dropdown-title{
@@ -19,16 +27,34 @@
 }
 
 .content-hidden{
+    position: relative;
     display: flex;
-    transition: transform 0.3s ease;
     height: 0;
+    overflow: hidden;
+    transform: translateY(-100px);
+    transition: all 0.6s ease;
+    pointer-events: none;
+    z-index: -1;
+    p{
+        font-family: $font-primary;
+        font-size: 18px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
 }
 
 .content-shown{
     display: flex;
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    transition: all 0.6s ease;
     height: 10vh;
-    background-color: #ffe3e3;
+    z-index: -1;
+    p{
+        font-family: $font-primary;
+        font-size: 18px;
+        opacity: 1;
+        transition: opacity 0.8s ease;
+    }
 }
 
 .vector-normal{

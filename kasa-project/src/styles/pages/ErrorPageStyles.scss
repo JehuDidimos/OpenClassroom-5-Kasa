@@ -1,21 +1,23 @@
+@import "../helpers/font.scss";
+@import "../helpers/spacing.scss";
 .main-container{
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-primary;
 }
 
 .error-code{
     font-size: 288px;
     font-weight: 700;
     color: #FF6060;
-    padding: 8vh;
+    padding: $space-xxl;
 }
 
 .error-message{
     font-weight: 500;
     font-size: 36px;
     color: #FF6060;
-    padding: 10vh;
+    padding: $space-g;
 }
 
 .home-link{
@@ -25,7 +27,7 @@
             color: inherit;
         }
     }
-    padding-bottom: 10vh;
+    padding-bottom: $space-g;
     
 }
 

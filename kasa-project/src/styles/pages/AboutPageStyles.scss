@@ -1,5 +1,8 @@
+@import '../helpers/spacing.scss';
+
 .dropdown-container{
     display: grid;
-    row-gap: 30px;
+    row-gap: $space-lg;
     justify-content: center;
+    padding: $space-xl 0;
 }

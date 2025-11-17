@@ -1,9 +1,10 @@
+@import "../helpers/spacing.scss";
 .banner-container{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 50px 0px;
+    padding: $space-xl 0px;
     img{
         width: 80vw;
         height: 25vh;
