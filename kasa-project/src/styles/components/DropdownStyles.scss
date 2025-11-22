@@ -31,26 +31,22 @@
     display: flex;
     height: 0;
     overflow: hidden;
-    transform: translateY(-100px);
     transition: all 0.6s ease;
     pointer-events: none;
     z-index: -1;
+    width: 77vw;
     p{
+        padding-left: $space-sm;
         font-family: $font-primary;
         font-size: 18px;
-        opacity: 0;
         transition: opacity 0.4s ease;
     }
 }
 
 .content-shown{
     display: flex;
-    overflow: hidden;
     transition: all 0.6s ease;
-    height: 10vh;
     width: 77vw;
-
-    z-index: -1;
     p{
         font-family: $font-primary;
         font-size: 18px;

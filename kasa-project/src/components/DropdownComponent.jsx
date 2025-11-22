@@ -1,17 +1,24 @@
 import "../styles/components/DropdownStyles.scss"
 import closedVector from "../assets/Vector-up.png"
-import { useState } from "react";
-function DropdownComponent() {
+import { useEffect, useRef, useState } from "react";
+function DropdownComponent({children, title}) {
     const [flipped, setFlipped] = useState(false);
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+      console.log(contentRef.current.scrollHeight)
+    }, [flipped])
+
 
     function toggleFlipAnimation(){
         setFlipped(prev => !prev);
-        console.log(flipped);
     }
     return (
       <div className="dropdown-single">
         <div className="dropdown-main" onClick={() => toggleFlipAnimation()}>
-          <div className="dropdown-title">Sample Title</div>
+          <div className="dropdown-title">
+            {title}
+          </div>
           <div className="vector">
             <img
               className={flipped ? "vector-normal" : "vector-flipped"}
@@ -19,10 +26,19 @@ function DropdownComponent() {
             />
           </div>
         </div>
-        <div className={flipped ? "content-shown" : "content-hidden"}>
-          <p>
-            Vivamus aliquet turpis non nunc fermentum, eget vulputate libero tincidunt. Duis sed felis non magna dictum volutpat.
+        <div className="content-hidden"
+          ref={contentRef}
+          style={{ 
+            height: flipped ? `${contentRef.current.scrollHeight}px` : '0',
+            transform: flipped ? '' : `translateY(-100px)`
+          }}
+        >
+          <p
+          style={{opacity: flipped ? '1' : '0'}}>
+            {children}
           </p>
+          
+
         </div>
       </div>
     );
