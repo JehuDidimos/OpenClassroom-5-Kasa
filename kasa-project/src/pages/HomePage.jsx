@@ -5,6 +5,10 @@ import BannerComponent from "../components/BannerComponent";
 import PropertyListComponent from "../components/PropertyListComponent";
 import "../styles/pages/HomeStyles.scss";
 
+//Reset CSS
+//Use color variables
+//Look into themes
+
 console.log(bannerImage)
 
 function HomePage() {

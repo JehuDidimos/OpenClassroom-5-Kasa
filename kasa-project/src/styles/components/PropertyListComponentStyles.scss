@@ -1,12 +1,13 @@
 @import "../helpers/spacing.scss";
+@import "../helpers/font.scss";
 .property-table{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    max-width: calc(3 * 300px);    
     row-gap: $space-xl;
     column-gap: $space-xxl;
     padding: $space-xl 0px;
     width: 80vw;
-    height: 100vh;
 }
 
 .card-overlay{
@@ -17,6 +18,8 @@
 }
 
 .property-card{
+    max-width: 340px;
+    min-height: 300px;
     position: relative;
     background-color: #FF6060;
     border-radius: 10px;
@@ -25,10 +28,9 @@
         position:absolute;
         bottom: 0;
         left: 0;
-        width: 100vw;
         padding: $space-lg;
         color:#FFFFFF;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 700;
     }
 }
