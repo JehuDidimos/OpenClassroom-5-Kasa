@@ -1,6 +1,6 @@
 @import '..//helpers/font.scss';
 @import '..//helpers/spacing.scss';
-
+@import '../helpers/colors.scss';
 .dropdown-single{
     display: block;
     overflow: hidden;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FF6060;
+    background-color: $color-red;
     border-radius: 5px;
     width: 77vw;
     height: 4vh;
@@ -23,7 +23,7 @@
     font-family: $font-primary;
     font-size: 24px;
     font-weight: 700;
-    color:#FFFFFF;
+    color:$color-white;
 }
 
 .content-hidden{
@@ -40,6 +40,7 @@
         font-family: $font-primary;
         font-size: 18px;
         transition: opacity 0.4s ease;
+        padding-top: $space-xxs;
     }
 }
 
