@@ -5,9 +5,9 @@ import BannerComponent from "../components/BannerComponent";
 import PropertyListComponent from "../components/PropertyListComponent";
 import "../styles/pages/HomeStyles.scss";
 
-//Reset CSS
-//Use color variables
-//Look into themes
+//TODO ABout dropdown text needs paddding-top
+//TODO Use color variables
+//TODO Look into themes
 
 console.log(bannerImage)
 

@@ -9,20 +9,20 @@
 .error-code{
     font-size: 288px;
     font-weight: 700;
-    color: #FF6060;
+    color: $color-red;
     padding: $space-xxl;
 }
 
 .error-message{
     font-weight: 500;
     font-size: 36px;
-    color: #FF6060;
+    color: $color-red;
     padding: $space-g;
 }
 
 .home-link{
     a{
-        color: black;
+        color: $color-black;
         &:visited{
             color: inherit;
         }

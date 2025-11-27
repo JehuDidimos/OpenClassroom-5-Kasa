@@ -1,8 +1,8 @@
 @import '../helpers/spacing.scss';
 
 .footer-container{
-    background-color: rgb(0, 0, 0);
-    color: #FFFFFF;
+    background-color: $color-black;
+    color: $color-white;
     display: flex;
     flex-direction: column;
     justify-content: center;

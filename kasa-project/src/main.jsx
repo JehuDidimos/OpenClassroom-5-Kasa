@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import PropertyPage from './pages/PropertyPage.jsx';
+import "./styles/base/_reset.scss"
 
 
 createRoot(document.getElementById('root')).render(

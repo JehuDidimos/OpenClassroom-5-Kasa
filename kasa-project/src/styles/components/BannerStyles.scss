@@ -1,4 +1,5 @@
 @import "../helpers/spacing.scss";
+@import "../helpers/colors.scss";
 .banner-container{
     display: flex;
     justify-content: center;
@@ -22,7 +23,7 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: #5a5a5a4e;
+    background-color: $color-gray;
     border-radius: 16px;
 }
 
