@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/components/PropertyListComponentStyles.scss"
+import { useNavigate } from "react-router";
 
 function PropertyListComponent() {
     const propertyTitles = [
@@ -12,6 +13,7 @@ function PropertyListComponent() {
     ];
 
     const [data, setData] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() =>  {
         const fetchData = async () => {
@@ -27,13 +29,17 @@ function PropertyListComponent() {
         fetchData();
     }, []);
 
+    function pageRedirect(propertyId){
+        navigate(`/property/${propertyId}`);
+    }
+
     return ( 
         <>
         <div className="property-table">
             {data.map((data, index) => (
                 <>
                 
-                <div className="property-card" key={data.id}>
+                <div className="property-card" key={data.id} onClick={() => pageRedirect(data.id)}>
                     <div className="card-overlay"></div>
                     <p>
                         {data.title}

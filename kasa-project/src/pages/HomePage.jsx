@@ -5,7 +5,6 @@ import BannerComponent from "../components/BannerComponent";
 import PropertyListComponent from "../components/PropertyListComponent";
 import "../styles/pages/HomeStyles.scss";
 
-//TODO ABout dropdown text needs paddding-top
 //TODO Look into themes
 
 console.log(bannerImage)
