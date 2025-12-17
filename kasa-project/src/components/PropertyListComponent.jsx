@@ -3,17 +3,9 @@ import "../styles/components/PropertyListComponentStyles.scss"
 import { useNavigate } from "react-router";
 
 function PropertyListComponent() {
-    const propertyTitles = [
-        "Modern Downtown Apartment",
-        "Cozy Suburban Home",
-        "Luxury Beachfront Villa",
-        "Rustic Mountain Cabin",
-        "Charming Country Cottage",
-        "Spacious City Loft"
-    ];
 
     const [data, setData] = useState([]);
-    const navigate = useNavigate();
+    const navigate = useNavigate(); //Use with redux 
 
     useEffect(() =>  {
         const fetchData = async () => {
@@ -29,6 +21,9 @@ function PropertyListComponent() {
         fetchData();
     }, []);
 
+    //Link tag <a> refreshes (don't use for navigating within same page) <link> (doesn't refresh)
+    //Be able to explain code the gpt gives you
+    //Ask for multiple different implementations compare/contrast
     function pageRedirect(propertyId){
         navigate(`/property/${propertyId}`);
     }

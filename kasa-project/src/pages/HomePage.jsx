@@ -7,8 +7,6 @@ import "../styles/pages/HomeStyles.scss";
 
 //TODO Look into themes
 
-console.log(bannerImage)
-
 function HomePage() {
     return (
         <>
