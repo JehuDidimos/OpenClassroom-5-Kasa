@@ -1,21 +1,19 @@
 @import "../helpers/spacing.scss";
 @import "../helpers/colors.scss";
-.banner-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: $space-xl 0px;
-    img{
-        width: 80vw;
-        height: 25vh;
-        object-fit: cover;
-        display: block;
-        border-radius: 16px;
-    }
-}
-
-.image-overlay{
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: $space-xl 0px;
+  img {
+    width: 80vw;
+    height: 25vh;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+  }
+  .overlay {
     width: 80vw;
     height: 25vh;
     position: absolute;
@@ -25,5 +23,13 @@
     z-index: 10;
     background-color: $color-gray;
     border-radius: 16px;
+  }
+  &.large {
+    img{
+        height: 50vh;
+    }
+    .overlay{
+        height: 50vh;
+    }
+  }
 }
-

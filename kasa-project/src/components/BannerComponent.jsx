@@ -2,11 +2,10 @@ import "../styles/components/BannerStyles.scss";
 
 function BannerComponent(props) {
 
-    console.log(props.imageSource)
 
     return ( 
-        <div className="banner-container">
-            <div className="image-overlay"></div>
+        <div className={"banner-container " + (!props.size ? "" : props.size)}>
+            <div className={!props.overlay ? "" : props.overlay}></div>
             <img src={props.imageSource} />
         </div>
      );

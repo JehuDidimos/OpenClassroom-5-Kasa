@@ -13,7 +13,6 @@ function PropertyListComponent() {
                 const res = await fetch('/api/projects/Web+Developer+P6/2024/JsonFile+P6.txt');
                 const jsonResponse = await res.json();
                 setData(jsonResponse);
-                console.log(jsonResponse)
             } catch (error){
                 console.log("Fetch Error: " + error);
             }
