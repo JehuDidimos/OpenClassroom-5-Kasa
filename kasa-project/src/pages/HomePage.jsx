@@ -11,7 +11,10 @@ function HomePage() {
     return (
         <>
           <div className="main-container">
-              <BannerComponent imageSource={bannerImage} overlay="overlay"/>
+            <div className="home-banner-container">
+                <BannerComponent imageSource={bannerImage} overlay="overlay"/>
+                <p>At home, everywhere, and anywhere</p>
+            </div>
               <PropertyListComponent/>
           </div>
         </>
