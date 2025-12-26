@@ -1,8 +1,17 @@
+@import "../helpers/font.scss";
+
 .carousel-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    p{
+        position: absolute;
+        font-family: $font-primary;
+        font-weight: 500;
+        font-size: 18px;
+        color: white;
+    }
 }
 
 .carousel-buttons{
@@ -11,4 +20,11 @@
     justify-content: space-between;
     align-items: center;
     width: 77vw;
+    button{
+        background-color: transparent;
+        border: none;
+    }
+}
+.flip-button{
+    transform: rotateY(180deg);
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/components/CarouselStyles.scss";
 import BannerComponent from "./BannerComponent";
+import vector from "../assets/Vector.png"
 
 function CarouselComponent({ propertyId }) {
   const [data, setData] = useState({});
@@ -39,9 +40,14 @@ function CarouselComponent({ propertyId }) {
     <div className="carousel-container">
       <BannerComponent imageSource={data?.pictures?.[index]} size="large" />
       <div className="carousel-buttons">
-        <button onClick={handlePrevious}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+        <button onClick={handlePrevious}>
+          <img src={vector} alt="" />
+        </button>
+        <button onClick={handleNext} className="flip-button">
+          <img src={vector} alt="" />
+        </button>
       </div>
+      <p>{index + 1}/{length}</p>
     </div>
   );
 }

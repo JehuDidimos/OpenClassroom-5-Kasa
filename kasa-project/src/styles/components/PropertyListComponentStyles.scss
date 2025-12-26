@@ -7,8 +7,10 @@
     max-width: calc(3 * 300px);    
     row-gap: $space-xl;
     column-gap: $space-xxl;
-    padding: $space-xl 0px;
+    padding: $space-xl;
     width: 80vw;
+    background-color: #F6F6F6;
+    border-radius: 25px;
 }
 
 .card-overlay{

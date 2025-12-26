@@ -1,10 +1,12 @@
 @import '../helpers/font.scss';
+@import '../helpers/spacing.scss';
 
 .main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: $space-xl;
 }
 
 .home-banner-container{

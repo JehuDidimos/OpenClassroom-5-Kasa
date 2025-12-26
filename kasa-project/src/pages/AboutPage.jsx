@@ -12,20 +12,17 @@ function AboutPage() {
             <div className="about-container">
                 <BannerComponent imageSource={bannerImage} overlay="overlay"/>
                 <div className="dropdown-container">
-                    <DropdownComponent title="Sample Title">  
-                        Vivamus aliquet turpis non nunc fermentum, eget vulputate libero tincidunt. Duis sed felis non magna dictum volutpat.
+                    <DropdownComponent title="Reliability">  
+                        Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.
                     </DropdownComponent>
-                    <DropdownComponent title="Sample Title">
-                        Vivamus aliquet turpis non nunc fermentum, eget vulputate libero tincidunt. Duis sed felis non magna dictum volutpat.
-                        Vivamus aliquet turpis non nunc fermentum, eget vulputate libero tincidunt. Duis sed felis non magna dictum volutpat.
-                        Vivamus aliquet turpis non nunc fermentum, eget vulputate libero tincidunt. Duis sed felis non magna dictum volutpat.
-                        Vivamus aliquet turpis non nunc fermentum, eget vulputate libero tincidunt. Duis sed felis non magna dictum volutpat.
+                    <DropdownComponent title="Respect">
+                        La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
                     </DropdownComponent>
-                    <DropdownComponent title="Sample Title">  
-                        Vivamus aliquet turpis non nunc fermentum, eget vulputate libero tincidunt. Duis sed felis non magna dictum volutpat.
+                    <DropdownComponent title="Service">  
+                        La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
                     </DropdownComponent>
-                    <DropdownComponent title="Sample Title">  
-                        Vivamus aliquet turpis non nunc fermentum, eget vulputate libero tincidunt. Duis sed felis non magna dictum volutpat.
+                    <DropdownComponent title="Security">  
+                        La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
                     </DropdownComponent>
                 </div>
                 
