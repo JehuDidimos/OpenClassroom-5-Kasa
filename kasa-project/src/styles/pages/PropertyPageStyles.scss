@@ -1,5 +1,43 @@
+@import "../helpers/spacing.scss";
+@import "../helpers/font.scss";
+@import "../helpers/colors.scss";
+
 .property-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-primary;
+}
+
+.property-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+}
+
+.property-icons{
     display: flex;
     justify-content: center;
     align-items: center;
+    column-gap: $space-sm;
+    img{
+        width: 4vw;
+        border-radius: 50%;
+    }
+}
+
+.property-title{
+    font-size: 36px;
+    font-weight: 500;
+    color: $color-red
+}
+
+.host-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    color: $color-red;
 }

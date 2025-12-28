@@ -1,6 +1,8 @@
 @import "../helpers/font.scss";
+@import "../helpers/spacing.scss";
 
 .carousel-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +12,8 @@
         font-family: $font-primary;
         font-weight: 500;
         font-size: 18px;
-        color: white;
+        color: rgb(255, 255, 255);
+        bottom: $space-xxl;
     }
 }
 

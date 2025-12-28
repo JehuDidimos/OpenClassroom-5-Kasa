@@ -11,6 +11,7 @@ function PropertyListComponent() {
         const fetchData = async () => {
             try{
                 const res = await fetch('/api/projects/Web+Developer+P6/2024/JsonFile+P6.txt');
+                if (!res.ok) throw new Error(res.status);
                 const jsonResponse = await res.json();
                 setData(jsonResponse);
             } catch (error){

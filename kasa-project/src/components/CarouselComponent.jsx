@@ -17,7 +17,6 @@ function CarouselComponent({ propertyId }) {
         if (!res.ok) throw new Error(res.status);
         const jsonResponse = await res.json();
         const match = jsonResponse.find((item) => item.id === propertyId);
-        console.log(match);
         setData(match);
       } catch (err) {
         console.error(err);
