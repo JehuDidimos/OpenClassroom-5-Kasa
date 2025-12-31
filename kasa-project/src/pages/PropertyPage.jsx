@@ -34,17 +34,15 @@ function PropertyPage() {
       <div className="property-content">
         <div className="property-description">
           <p className="property-title">{data?.title}</p>
+
           <p className="location">{data?.location}</p>
         </div>
 
         <div className="property-icons">
           <div className="host-name">
-            {data?.host?.name
-            ?.split(/\s+/)
-            .map((name, i) => (
+            {data?.host?.name?.split(/\s+/).map((name, i) => (
               <span key={i}>{name}</span>
-            ))
-            }
+            ))}
           </div>
           <div className="host-image">
             <img src={data?.host?.picture} alt="" />
@@ -52,12 +50,20 @@ function PropertyPage() {
         </div>
       </div>
       <div className="property-content">
-          <div className="tags">
-            {data?.tags?.map((tag, index) => (
-              <TagComponent tagName={tag}/>
-            ))}
-          </div>
+        <div className="tags">
+          {data?.tags?.map((tag, index) => (
+            <TagComponent tagName={tag} />
+          ))}
         </div>
+        <div className="rating">
+        {Array.from({ length: parseInt(data?.rating, 10) }).map((_, i) => (
+          <i class="fa-solid fa-star" style={{color: "#FF6060"}}></i>
+        ))}
+        {Array.from({ length: 5 - parseInt(data?.rating, 10) }).map((_, i) => (
+          <i class="fa-solid fa-star" style={{color: "#E3E3E3"}}></i>
+        ))}
+      </div>
+      </div>
     </div>
   );
 }
