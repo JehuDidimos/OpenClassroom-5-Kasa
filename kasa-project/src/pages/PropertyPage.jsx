@@ -4,6 +4,7 @@ import HeaderComponent from "../components/HeaderComponent";
 import { useEffect, useState } from "react";
 import CarouselComponent from "../components/CarouselComponent";
 import "../styles/pages/PropertyPageStyles.scss";
+import TagComponent from "../components/TagComponent";
 
 function PropertyPage() {
   let param = useParams();
@@ -33,6 +34,7 @@ function PropertyPage() {
       <div className="property-content">
         <div className="property-description">
           <p className="property-title">{data?.title}</p>
+          <p className="location">{data?.location}</p>
         </div>
 
         <div className="property-icons">
@@ -49,6 +51,13 @@ function PropertyPage() {
           </div>
         </div>
       </div>
+      <div className="property-content">
+          <div className="tags">
+            {data?.tags?.map((tag, index) => (
+              <TagComponent tagName={tag}/>
+            ))}
+          </div>
+        </div>
     </div>
   );
 }
