@@ -32,15 +32,12 @@ function PropertyListComponent() {
         <>
         <div className="property-table">
             {data.map((data, index) => (
-                <>
-                
                 <div className="property-card" key={data.id} onClick={() => pageRedirect(data.id)}>
-                    <div className="card-overlay"></div>
+                    <div key={data.id} className="card-overlay"></div>
                     <p>
                         {data.title}
                     </p>
                 </div>
-                </>
                 
             ))}
         </div>

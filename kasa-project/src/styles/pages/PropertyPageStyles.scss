@@ -19,6 +19,15 @@
     margin: $space-md 0;
 }
 
+.property-dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 80vw;
+    margin: $space-md 0;
+    column-gap: $space-xxl;
+}
+
 .property-icons{
     display: flex;
     justify-content: center;

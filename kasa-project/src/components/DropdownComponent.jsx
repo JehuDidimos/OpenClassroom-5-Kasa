@@ -1,9 +1,12 @@
 import "../styles/components/DropdownStyles.scss"
 import closedVector from "../assets/Vector-up.png"
-import { useEffect, useRef, useState } from "react";
-function DropdownComponent({children, title}) {
+import React, { useEffect, useRef, useState } from "react";
+function DropdownComponent({children, title, size} ) {
     const [flipped, setFlipped] = useState(false);
     const contentRef = useRef(null);
+    const childArray = React.Children.toArray(children);
+    
+
 
     useEffect(() => {
       console.log(contentRef.current.scrollHeight)
@@ -15,7 +18,7 @@ function DropdownComponent({children, title}) {
     }
     return (
       <div className="dropdown-single">
-        <div className="dropdown-main" onClick={() => toggleFlipAnimation()}>
+        <div className={"dropdown-main " + (!size ? "" : size)} onClick={() => toggleFlipAnimation()}>
           <div className="dropdown-title">
             {title}
           </div>
@@ -26,17 +29,17 @@ function DropdownComponent({children, title}) {
             />
           </div>
         </div>
-        <div className="content-hidden"
+        <div className={"content-hidden " + (!size ? "" : size)}
           ref={contentRef}
           style={{ 
             height: flipped ? `${contentRef.current.scrollHeight}px` : '0',
             transform: flipped ? '' : `translateY(-100px)`
           }}
         >
-          <p
+          <div  
           style={{opacity: flipped ? '1' : '0'}}>
             {children}
-          </p>
+          </div>
           
 
         </div>

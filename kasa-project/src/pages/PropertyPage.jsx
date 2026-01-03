@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import CarouselComponent from "../components/CarouselComponent";
 import "../styles/pages/PropertyPageStyles.scss";
 import TagComponent from "../components/TagComponent";
+import DropdownComponent from "../components/DropdownComponent";
 
 function PropertyPage() {
   let param = useParams();
@@ -52,17 +53,33 @@ function PropertyPage() {
       <div className="property-content">
         <div className="tags">
           {data?.tags?.map((tag, index) => (
-            <TagComponent tagName={tag} />
+            <TagComponent key={index} id={index} tagName={tag} />
           ))}
         </div>
         <div className="rating">
-        {Array.from({ length: parseInt(data?.rating, 10) }).map((_, i) => (
-          <i class="fa-solid fa-star" style={{color: "#FF6060"}}></i>
-        ))}
-        {Array.from({ length: 5 - parseInt(data?.rating, 10) }).map((_, i) => (
-          <i class="fa-solid fa-star" style={{color: "#E3E3E3"}}></i>
-        ))}
+          {Array.from({ length: parseInt(data?.rating, 10) }).map((_, i) => (
+            <i className="fa-solid fa-star" style={{ color: "#FF6060" }}></i>
+          ))}
+          {Array.from({ length: 5 - parseInt(data?.rating, 10) }).map(
+            (_, i) => (
+              <i className="fa-solid fa-star" style={{ color: "#E3E3E3" }}></i>
+            )
+          )}
+        </div>
       </div>
+      <div className="property-dropdown">
+        <div className="dropdown-container">
+          <DropdownComponent size="small" title="Description"> {data?.description}</DropdownComponent>
+        </div>
+        <div className="dropdown-container">
+          <DropdownComponent size="small" title="Amenities">
+            {
+              data?.equipments?.map((item, index) => (
+                <p key={index} id={index}>{item}</p>
+              ))
+            }
+          </DropdownComponent>
+        </div>
       </div>
     </div>
   );

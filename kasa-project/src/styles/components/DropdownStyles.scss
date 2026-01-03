@@ -17,6 +17,9 @@
     height: 4vh;
     padding: 10px 20px 10px 10px;
     z-index: 1;
+    &.small{
+        width: 35vw;
+    }
 }
 
 .dropdown-title{
@@ -35,12 +38,15 @@
     pointer-events: none;
     z-index: -1;
     width: 77vw;
-    p{
+    p, div{
         padding-left: $space-sm;
         font-family: $font-primary;
         font-size: 18px;
         transition: opacity 0.4s ease;
         padding-top: $space-xs;
+    }
+    &.small{
+        width: 35vw;
     }
 }
 
