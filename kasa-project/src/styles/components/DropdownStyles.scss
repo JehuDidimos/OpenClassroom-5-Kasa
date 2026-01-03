@@ -18,7 +18,7 @@
     padding: 10px 20px 10px 10px;
     z-index: 1;
     &.small{
-        width: 35vw;
+        width: 90%;
     }
 }
 
@@ -46,7 +46,7 @@
         padding-top: $space-xs;
     }
     &.small{
-        width: 35vw;
+        max-width: 90%;;
     }
 }
 

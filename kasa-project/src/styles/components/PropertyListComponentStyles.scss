@@ -11,9 +11,12 @@
     width: 80vw;
     background-color: #F6F6F6;
     border-radius: 25px;
+    place-items: center;
 }
 
 .card-overlay{
+    position: absolute;
+    min-width: 300px;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -22,6 +25,7 @@
 
 .property-card{
     max-width: 340px;
+    min-width: 300px;
     min-height: 300px;
     position: relative;
     background-color: $color-red;
