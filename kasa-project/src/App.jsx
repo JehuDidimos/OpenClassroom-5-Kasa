@@ -2,7 +2,7 @@
 import HeaderComponent from './components/HeaderComponent'
 import FooterComponent from './components/FooterComponent'
 import './App.scss'
-import { Routes, Route } from 'react-router'
+import { Routes, Route, Navigate } from 'react-router'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import AboutPage from './pages/AboutPage'
@@ -15,7 +15,8 @@ function App() {
     <>
     <HeaderComponent/>
       <Routes>
-        <Route path="/home" element={<HomePage/>}/>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/home" element={<Navigate to="/" replace/>}/>
         <Route path="/about" element={<AboutPage/>}/>
         <Route path="/property/:id" element={<PropertyPage/>}/>
         <Route path="/*" element={<ErrorPage/>}/>

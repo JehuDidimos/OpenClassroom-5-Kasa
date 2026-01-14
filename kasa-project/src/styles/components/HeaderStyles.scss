@@ -1,23 +1,25 @@
 @import '../helpers/spacing.scss';
+@import '../helpers/font.scss';
 
 .header-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 $space-xxl; //Create spacing variables -> spacing.scss rem (reccomended)
+    padding: 0 clamp(#{$space-md}, 5vw, #{$space-xxl});
     padding-top: $space-xl;
 }
 
 .nav-buttons{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: clamp(#{$space-lg}, 7vw, #{$space-g});
     div{
         text-align: end;
-        width:8vw;
+        width:auto;
         font-family: 'Montserrat';
         font-weight: 500;
-        font-size: 24px;
+        font-size: clamp(#{$fontsize-s}, 2vw, #{$fontsize-l});
         &:hover{
             text-decoration: underline;
             cursor: pointer;
@@ -30,4 +32,10 @@
         }
     }
     
+}
+
+.icon-container{
+    img{
+        width: max(145px, 14vw);
+    }
 }
