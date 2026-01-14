@@ -1,43 +1,43 @@
 @import "../helpers/spacing.scss";
 @import "../helpers/font.scss";
 @import "../helpers/colors.scss";
-.property-table{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    max-width: calc(3 * 300px);    
-    row-gap: $space-xl;
-    column-gap: $space-xxl;
-    padding: $space-xl;
-    width: 80vw;
-    background-color: #F6F6F6;
-    border-radius: 25px;
-    place-items: center;
+.property-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  max-width: calc(3 * 300px);
+  row-gap: $space-xl;
+  column-gap: $space-xxl;
+  padding: $space-xl;
+  width: 80vw;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  place-items: center;
 }
 
-.card-overlay{
+.card-overlay {
+  position: absolute;
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #ffffff00, #0a0a0a00, #04040469);
+}
+
+.property-card {
+  max-width: 340px;
+  min-width: 300px;
+  min-height: 300px;
+  position: relative;
+  background-color: $color-red;
+  border-radius: 10px;
+
+  p {
     position: absolute;
-    min-width: 300px;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background: linear-gradient(to bottom,#FFFFFF00, #0A0A0A00, #04040469)
-}
-
-.property-card{
-    max-width: 340px;
-    min-width: 300px;
-    min-height: 300px;
-    position: relative;
-    background-color: $color-red;
-    border-radius: 10px;
-
-    p{
-        position:absolute;
-        bottom: 0;
-        left: 0;
-        padding: $space-lg;
-        color:$color-white;
-        font-size: 14px;
-        font-weight: 700;
-    }
+    bottom: 0;
+    left: 0;
+    padding: $space-lg;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 700;
+  }
 }
