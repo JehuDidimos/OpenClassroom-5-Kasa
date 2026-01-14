@@ -13,13 +13,13 @@
 .nav-buttons{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(#{$space-lg}, 7vw, #{$space-g});
+    gap: clamp(#{$space-sm}, calc(0.5rem + 5cqw), 8rem);
     div{
         text-align: end;
         width:auto;
         font-family: 'Montserrat';
         font-weight: 500;
-        font-size: clamp(#{$fontsize-s}, 2vw, #{$fontsize-l});
+        font-size: clamp(#{$fontsize-xs}, 4vw, #{$fontsize-l});
         &:hover{
             text-decoration: underline;
             cursor: pointer;
