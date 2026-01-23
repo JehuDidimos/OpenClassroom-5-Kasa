@@ -15,7 +15,7 @@ function PropertyPage() {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          "/api/projects/Web+Developer+P6/2024/JsonFile+P6.txt"
+          "/api/projects/Web+Developer+P6/2024/JsonFile+P6.txt",
         );
         const jsonResponse = await res.json();
         const match = jsonResponse.find((item) => item.id === param.id);
@@ -33,51 +33,61 @@ function PropertyPage() {
     <div className="property-container">
       <CarouselComponent propertyId={param.id}></CarouselComponent>
       <div className="property-content">
-        <div className="property-description">
-          <p className="property-title">{data?.title}</p>
+        <div className="property-details">
+          <div className="property-description">
+            <p className="property-title">{data?.title}</p>
 
-          <p className="location">{data?.location}</p>
+            <p className="location">{data?.location}</p>
+            <div className="tags">
+              {data?.tags?.map((tag, index) => (
+                <TagComponent key={index} id={index} tagName={tag} />
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="property-icons">
-          <div className="host-name">
-            {data?.host?.name?.split(/\s+/).map((name, i) => (
-              <span key={i}>{name}</span>
+        <div className="property-icon-rating">
+          <div className="property-icons">
+            <div className="host-name">
+              {data?.host?.name?.split(/\s+/).map((name, i) => (
+                <span key={i}>{name}</span>
+              ))}
+            </div>
+            <div className="host-image">
+              <img src={data?.host?.picture} alt="" />
+            </div>
+          </div>
+
+          <div className="rating">
+            {Array.from({ length: parseInt(data?.rating, 10) }).map((_, i) => (
+              <i className="fa-solid fa-star" style={{ color: "#FF6060" }}></i>
             ))}
-          </div>
-          <div className="host-image">
-            <img src={data?.host?.picture} alt="" />
+            {Array.from({ length: 5 - parseInt(data?.rating, 10) }).map(
+              (_, i) => (
+                <i
+                  className="fa-solid fa-star"
+                  style={{ color: "#E3E3E3" }}
+                ></i>
+              ),
+            )}
           </div>
         </div>
       </div>
-      <div className="property-content">
-        <div className="tags">
-          {data?.tags?.map((tag, index) => (
-            <TagComponent key={index} id={index} tagName={tag} />
-          ))}
-        </div>
-        <div className="rating">
-          {Array.from({ length: parseInt(data?.rating, 10) }).map((_, i) => (
-            <i className="fa-solid fa-star" style={{ color: "#FF6060" }}></i>
-          ))}
-          {Array.from({ length: 5 - parseInt(data?.rating, 10) }).map(
-            (_, i) => (
-              <i className="fa-solid fa-star" style={{ color: "#E3E3E3" }}></i>
-            )
-          )}
-        </div>
-      </div>
+
       <div className="property-dropdown">
         <div className="dropdown-container">
-          <DropdownComponent size="small" title="Description"> {data?.description}</DropdownComponent>
+          <DropdownComponent size="small" title="Description">
+            {" "}
+            {data?.description}
+          </DropdownComponent>
         </div>
         <div className="dropdown-container">
           <DropdownComponent size="small" title="Amenities">
-            {
-              data?.equipments?.map((item, index) => (
-                <p key={index} id={index}>{item}</p>
-              ))
-            }
+            {data?.equipments?.map((item, index) => (
+              <p key={index} id={index}>
+                {item}
+              </p>
+            ))}
           </DropdownComponent>
         </div>
       </div>

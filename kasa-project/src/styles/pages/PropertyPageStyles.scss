@@ -12,12 +12,22 @@
 }
 
 .property-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 80vw;
-    margin: $space-md 0;
+    display: flex;
 }
+
+.property-details{
+    display: flex;
+    align-items: center;
+}
+
+.property-icon-rating{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 
 .property-dropdown{
     display: flex;
@@ -34,19 +44,19 @@
     align-items: center;
     column-gap: $space-sm;
     img{
-        width: 4vw;
+        width: clamp(2rem, 5.5vw, 4rem);
         border-radius: 50%;
     }
 }
 
 .property-title{
-    font-size: 36px;
+    font-size: clamp(#{$fontsize-m}, 3vw, #{$fontsize-xl});
     font-weight: 500;
     color: $color-red
 }
 
 .location{
-    font-size: 18px;
+    font-size: clamp(#{$fontsize-xs}, 2vw, #{$fontsize-m});
     font-weight: 500;
     margin-top: $space-xs;
 }
@@ -54,15 +64,16 @@
 .host-name{
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: clamp(#{$fontsize-xs}, 2vw, #{$fontsize-m});
     font-weight: 500;
     color: $color-red;
 }
 
 .tags{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: row;
     column-gap: $space-sm;
 }
+

@@ -5,9 +5,9 @@
 .tag-container{
     font-family: $font-primary;
     color: $color-white;
-    font-size: 14px;
+    font-size: clamp(.6rem, 1.5vw, #{$fontsize-s});
     font-weight: 700;
     border-radius: 10px;
     background-color: $color-red;
-    padding: $space-xxs $space-xl;
+    padding: $space-xxs clamp(#{$space-sm, 2.5vw, #{$space-lg}});
 }
