@@ -14,6 +14,7 @@
 .property-content{
     width: 80vw;
     display: flex;
+    justify-content: space-between;
 }
 
 .property-details{
@@ -75,5 +76,40 @@
     align-items: center;
     flex-direction: row;
     column-gap: $space-sm;
+}
+
+@media(max-width: 580px){
+    .property-content{
+        flex-direction: column;
+    }
+    .property-icon-rating{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .property-descrption{
+        flex-direction: row;
+    }
+
+    .location{
+        margin: $space-sm 0;
+    }
+
+    .tags{
+        margin: $space-sm 0;
+    }
+
+    .property-icons{
+        img{
+            width: clamp(2rem, 8vw, 4rem);
+        }
+    }
+
+    .host-name{
+        font-size: clamp(#{$fontsize-xs}, 3vw, #{$fontsize-m});
+    }
+
+    .dropdown-container{
+        padding: $space-lg 0
+    }
 }
 

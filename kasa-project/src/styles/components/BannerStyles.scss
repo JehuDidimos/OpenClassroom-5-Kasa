@@ -33,3 +33,9 @@
     }
   }
 }
+
+@media(max-width: 580px){
+  .banner-container{
+    padding: $space-lg 0px;
+  }
+}
