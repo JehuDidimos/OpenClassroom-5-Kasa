@@ -17,7 +17,7 @@ function DropdownComponent({children, title, size} ) {
         setFlipped(prev => !prev);
     }
     return (
-      <div className="dropdown-single">
+      <div className={"dropdown-single " + (!size ? "" : size)}>
         <div className={"dropdown-main " + (!size ? "" : size)} onClick={() => toggleFlipAnimation()}>
           <div className="dropdown-title">
             {title}

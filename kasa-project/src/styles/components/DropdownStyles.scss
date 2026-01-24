@@ -3,6 +3,7 @@
 @import '../helpers/colors.scss';
 .dropdown-single{
     display: block;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -12,19 +13,21 @@
     justify-content: space-between;
     align-items: center;
     background-color: $color-red;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 77vw;
     height: 4vh;
     padding: 10px 20px 10px 10px;
     z-index: 1;
     &.small{
-        width: 90%;
+        box-sizing: border-box;
+        width: 100%;
+        height: 6vh;
     }
 }
 
 .dropdown-title{
     font-family: $font-primary;
-    font-size: 24px;
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 700;
     color:$color-white;
 }
@@ -46,7 +49,7 @@
         padding-top: $space-xs;
     }
     &.small{
-        max-width: 90%;;
+        max-width: 90%;
     }
 }
 
@@ -69,4 +72,5 @@
 
 .vector-flipped{
     transition: transform 0.3s ease;
+    width: clamp(17px, 2vw, 25px)
 }

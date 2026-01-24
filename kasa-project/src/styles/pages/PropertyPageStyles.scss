@@ -78,9 +78,14 @@
     column-gap: $space-sm;
 }
 
-@media(max-width: 580px){
+@media(max-width: 830px){
     .property-content{
         flex-direction: column;
+    }
+    .property-dropdown{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .property-icon-rating{
         flex-direction: row-reverse;
