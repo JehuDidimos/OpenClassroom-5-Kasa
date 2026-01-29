@@ -40,7 +40,7 @@ function PropertyPage() {
             <p className="location">{data?.location}</p>
             <div className="tags">
               {data?.tags?.map((tag, index) => (
-                <TagComponent key={index} id={index} tagName={tag} />
+                <TagComponent key={tag + index} tagName={tag} />
               ))}
             </div>
           </div>
@@ -49,8 +49,8 @@ function PropertyPage() {
         <div className="property-icon-rating">
           <div className="property-icons">
             <div className="host-name">
-              {data?.host?.name?.split(/\s+/).map((name, i) => (
-                <span key={i}>{name}</span>
+              {data?.host?.name?.split(/\s+/).map((name, index) => (
+                <span key={name + index}>{name}</span>
               ))}
             </div>
             <div className="host-image">
@@ -60,11 +60,16 @@ function PropertyPage() {
 
           <div className="rating">
             {Array.from({ length: parseInt(data?.rating, 10) }).map((_, i) => (
-              <i className="fa-solid fa-star" style={{ color: "#FF6060" }}></i>
+              <i
+                key={`star-filled-${i}`}
+                className="fa-solid fa-star"
+                style={{ color: "#FF6060" }}
+              ></i>
             ))}
             {Array.from({ length: 5 - parseInt(data?.rating, 10) }).map(
               (_, i) => (
                 <i
+                  key={`star-empty-${i}`}
                   className="fa-solid fa-star"
                   style={{ color: "#E3E3E3" }}
                 ></i>
@@ -84,9 +89,7 @@ function PropertyPage() {
         <div className="dropdown-container">
           <DropdownComponent size="small" title="Amenities">
             {data?.equipments?.map((item, index) => (
-              <p key={index} id={index}>
-                {item}
-              </p>
+              <p key={item + index}>{item}</p>
             ))}
           </DropdownComponent>
         </div>
