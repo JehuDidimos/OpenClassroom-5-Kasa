@@ -37,6 +37,7 @@ function PropertyListComponent() {
                     <p>
                         {data.title}
                     </p>
+                    <img src={data.cover} alt="" />
                 </div>
                 
             ))}
