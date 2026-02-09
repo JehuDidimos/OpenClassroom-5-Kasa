@@ -20,10 +20,6 @@ function PropertyListComponent() {
         };
         fetchData();
     }, []);
-
-    //Link tag <a> refreshes (don't use for navigating within same page) <link> (doesn't refresh)
-    //Be able to explain code the gpt gives you
-    //Ask for multiple different implementations compare/contrast
     function pageRedirect(propertyId){
         navigate(`/property/${propertyId}`);
     }
@@ -38,8 +34,7 @@ function PropertyListComponent() {
                         {data.title}
                     </p>
                     <img src={data.cover} alt="" />
-                </div>
-                
+                </div>                
             ))}
         </div>
         </>

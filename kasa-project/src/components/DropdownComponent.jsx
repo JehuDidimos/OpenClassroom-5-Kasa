@@ -40,8 +40,6 @@ function DropdownComponent({children, title, size} ) {
           style={{opacity: flipped ? '1' : '0'}}>
             {children}
           </div>
-          
-
         </div>
       </div>
     );
