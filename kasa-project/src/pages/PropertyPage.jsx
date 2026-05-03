@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
 import { useEffect, useState } from "react";
@@ -11,8 +11,7 @@ import DropdownComponent from "../components/DropdownComponent";
 function PropertyPage() {
   let param = useParams();
   const [data, setData] = useState({});
-  const navigate = useNavigate(); //Use with redux 
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,11 +22,10 @@ function PropertyPage() {
         const jsonResponse = await res.json();
         const match = jsonResponse.find((item) => item.id === param.id);
         if(!match){
-          navigate(`/Error`);
-        } else{
-          setData(match);
-        console.log(match);
+          pageRedirect();
+          return
         }
+        setData(match)
         
       } catch (err) {
         console.error(err);
@@ -36,6 +34,11 @@ function PropertyPage() {
 
     fetchData();
   }, [param.id]);
+
+    function pageRedirect(){
+      console.log("REDIRECT")
+      navigate(`/error`);
+  }
 
   return (
     <div className="property-container">
