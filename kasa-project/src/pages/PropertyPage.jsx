@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import CarouselComponent from "../components/CarouselComponent";
 import "../styles/pages/PropertyPageStyles.scss";
 import TagComponent from "../components/TagComponent";
@@ -10,6 +11,8 @@ import DropdownComponent from "../components/DropdownComponent";
 function PropertyPage() {
   let param = useParams();
   const [data, setData] = useState({});
+  const navigate = useNavigate(); //Use with redux 
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,8 +22,13 @@ function PropertyPage() {
         );
         const jsonResponse = await res.json();
         const match = jsonResponse.find((item) => item.id === param.id);
-        setData(match);
+        if(!match){
+          navigate(`/Error`);
+        } else{
+          setData(match);
         console.log(match);
+        }
+        
       } catch (err) {
         console.error(err);
       }
