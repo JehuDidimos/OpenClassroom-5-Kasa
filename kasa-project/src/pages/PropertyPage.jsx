@@ -2,7 +2,6 @@ import { useNavigate, useParams } from "react-router";
 import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 import CarouselComponent from "../components/CarouselComponent";
 import "../styles/pages/PropertyPageStyles.scss";
 import TagComponent from "../components/TagComponent";
