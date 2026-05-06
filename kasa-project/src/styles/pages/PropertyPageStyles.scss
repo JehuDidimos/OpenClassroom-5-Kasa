@@ -59,7 +59,8 @@
 .location{
     font-size: clamp(#{$fontsize-xs}, 2vw, #{$fontsize-m});
     font-weight: 500;
-    margin-top: $space-xs;
+    margin-top: $space-sm;
+    margin-bottom: $space-lg;
 }
 
 .host-name{
@@ -76,6 +77,10 @@
     align-items: center;
     flex-direction: row;
     column-gap: $space-sm;
+}
+
+.dropdown-container{
+        padding: $space-md 0
 }
 
 @media(max-width: 830px){

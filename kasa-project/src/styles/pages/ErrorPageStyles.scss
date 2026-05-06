@@ -8,7 +8,7 @@
 }
 
 .error-code{
-    font-size: 288px;
+    font-size: clamp(#{$fontsize-g}, 20vw, 24rem);
     font-weight: 700;
     color: $color-red;
     padding: $space-xxl;
@@ -16,9 +16,11 @@
 
 .error-message{
     font-weight: 500;
-    font-size: 36px;
+    font-size: clamp(8px, 6vw, 32px);
     color: $color-red;
-    padding: $space-g;
+    padding: clamp($space-md, 6vw , $space-g);
+    padding-bottom: $space-g;
+    text-align: center;
 }
 
 .home-link{
@@ -28,7 +30,7 @@
             color: inherit;
         }
     }
-    padding-bottom: $space-g;
+    padding-bottom: $space-lg;
     
 }
 
