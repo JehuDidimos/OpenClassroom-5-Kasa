@@ -6,6 +6,8 @@
     align-items: center;
     overflow: hidden;
     cursor: pointer;
+    background-color: $color-offWhite;
+    z-index: 5;
 }
 
 .dropdown-main{
@@ -48,6 +50,7 @@
         font-size: 18px;
         transition: opacity 0.4s ease;
         padding-top: $space-xs;
+        z-index: 10;
     }
     &.small{
         max-width: 90%;
